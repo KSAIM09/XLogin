@@ -19,12 +19,14 @@ const App = ()=>{
   const handleSubmit = (e) =>{
     e.preventDefault();
 
-    if(username === 'user' && password === 'password') {
-      setMessage(`Welcome, user!`);
-      // setShowForm(false);
-    }
-    else{
-      setMessage(`Invalid username or password`);
+    if (username.trim() === '' || password.trim() === '') {
+      setMessage('Please fill out both username and password fields.');
+    } else {
+      if (username === 'user' && password === 'password') {
+        setMessage(`Welcome, ${username}!`);
+      } else {
+        setMessage('Invalid username or password');
+      }
     }
   };
 
