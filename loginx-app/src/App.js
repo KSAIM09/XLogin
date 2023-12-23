@@ -36,7 +36,7 @@ const App = ()=>{
       
       <form onSubmit={handleSubmit}>
         <div>
-          <lable htmlFor="username">Username</lable>:
+          <lable htmlFor="Username">Username</lable>:
           <input
             placeholder='username'
             type='text'
@@ -49,7 +49,7 @@ const App = ()=>{
           />
         </div>
         <div>
-          <label htmlFor="password">Password</label>:
+          <label htmlFor="Password">Password</label>:
           <input
             placeholder='password'
             type='password'
