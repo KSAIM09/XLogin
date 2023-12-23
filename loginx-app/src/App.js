@@ -23,7 +23,7 @@ const App = ()=>{
 
 
   return (
-    <div>
+    <div className='App'>
       <h1>Login Page</h1>
       {message && <p>{message}</p>}
       
@@ -31,6 +31,7 @@ const App = ()=>{
         <div>
           <lable htmlFor="username">Username:</lable>
           <input
+            placeholder='username'
             type='text'
             id='username'
             value={username}
@@ -41,6 +42,7 @@ const App = ()=>{
         <div>
           <label htmlFor="password">Password:</label>
           <input
+            placeholder='password'
             type='password'
             id='password'
             value={password}
