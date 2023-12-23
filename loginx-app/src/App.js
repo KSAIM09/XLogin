@@ -34,6 +34,7 @@ const App = ()=>{
             placeholder='username'
             type='text'
             id='username'
+            name='username'
             value={username}
             onChange={(e)=> setUserName(e.target.value)} 
             required
@@ -45,6 +46,7 @@ const App = ()=>{
             placeholder='password'
             type='password'
             id='password'
+            name='password'
             value={password}
             onChange={(e)=> setPassword(e.target.value)}
             required
