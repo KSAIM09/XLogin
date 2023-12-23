@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 import './App.css';
 
 const App = ()=>{
@@ -7,7 +8,13 @@ const App = ()=>{
   const [message, setMessage] = useState('');
   // const [showForm, setShowForm] = useState(true);
 
-
+  const handleInputChange = (e) =>{
+    if(e.target.name === 'username'){
+      setUserName(e.target.value);
+    }else if (e.target.name === 'password'){
+      setPassword(e.target.value);
+    }
+  }
 
   const handleSubmit = (e) =>{
     e.preventDefault();
@@ -36,7 +43,8 @@ const App = ()=>{
             id='username'
             name='username'
             value={username}
-            onChange={(e)=> setUserName(e.target.value)} 
+            onChange={handleInputChange}
+            // onChange={(e)=> setUserName(e.target.value)} 
             required
           />
         </div>
@@ -48,7 +56,8 @@ const App = ()=>{
             id='password'
             name='password'
             value={password}
-            onChange={(e)=> setPassword(e.target.value)}
+            onChange={handleInputChange}
+            // onChange={(e)=> setPassword(e.target.value)}
             required
           />
         </div>
