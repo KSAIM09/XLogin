@@ -31,40 +31,34 @@ const App = ()=>{
 
   return (
     <div className='App'>
-      <h1>Login Page</h1>
-      {message && <p>{message}</p>}
-      
       <form onSubmit={handleSubmit}>
-        <div>
-          <lable htmlFor="Username">Username</lable>:
-          <input
-            placeholder='username'
-            type='text'
-            id='username'
-            name='username'
-            value={username}
-            onChange={handleInputChange}
+        <h1>Login Page</h1>
+        {message && <p>{message}</p>}
+        <lable htmlFor="Username">Username</lable>:
+        <input
+          placeholder='username'
+          type='text'
+          id='username'
+          name='username'
+          value={username}
+          onChange={handleInputChange}
             // onChange={(e)=> setUserName(e.target.value)} 
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="Password">Password</label>:
-          <input
-            placeholder='password'
-            type='password'
-            id='password'
-            name='password'
-            value={password}
-            onChange={handleInputChange}
+          required
+        />
+        <br />
+        <label htmlFor="Password">Password</label>:
+        <input
+          placeholder='password'
+          type='password'
+          id='password'
+          name='password'
+          value={password}
+          onChange={handleInputChange}
             // onChange={(e)=> setPassword(e.target.value)}
-            required
-          />
-        </div>
-        <div>
-          <button type='submit'>Submit</button>
-        </div>
-        
+          required
+        />
+        <br />
+        <button type='submit'>Submit</button>
       </form>
     </div>
   );
